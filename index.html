@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O.S.S.</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="style/global-style.css">
+    
+</head>
+<body>
+    <section id="login-screen">
+      <img src="img/logo.png" alt="">
+      <section id="login">
+          <h1>Login</h1>
+          <div id="form">
+                  <div class="campo">
+                      <i class="material-icons">person</i>
+                      <input type="text" name="name" id="name" placeholder="Login"required autocomplete="off">
+                  </div>
+                  <div class="campo">
+                          <i class="material-icons">vpn_key</i>
+                          <input type="password" name="id" id="id" placeholder="ID" required autocomplete="off" onkeypress(enter)="">
+                  </div>
+                  <button onclick="list()">Entrar</button>
+               </div>
+      </section>
+    </section>
+
+    <section id="content">
+      <h1>Default</h1>
+        <article>
+            <button class="btn" id="btn-close" onclick="fechar()">&times;</button>
+            <div class="info">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem veniam minus, tempora ipsa voluptates aperiam dignissimos corrupti molestiae, fugit corporis ipsum totam consequuntur pariatur asperiores modi. Porro, qui quis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut obcaecati neque commodi enim aliquam, minus accusamus excepturi animi sed. Aperiam animi ex, culpa consequatur impedit alias temporibus exercitationem quibusdam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut perferendis illum voluptatum nobis eligendi rerum similique voluptatibus dolore earum itaque assumenda tempora, inventore dolorem exercitationem eos nam soluta iusto dicta?</p>
+            </div>
+
+            <input type="checkbox" name="info" id="info"  > 
+            <label for="info" class="btn" onclick="change()" >
+            <i class="material-icons" style="font-size: 40px;">
+                description
+            </i>
+            </label>
+        </article>
+    </section>
+    <main>
+
+        <header>
+              
+              <div>
+                <h1>O.S.S.</h1>
+                <h3>Fichario de Arquivos</h3>
+            </div>
+            <div><i class="material-icons">person</i><h2 id="myuser">User__</h2></div>
+       
+        </header>
+            
+        <section class="docs">
+            <div class="d01" id="s01" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 01</p>
+            </div>
+            <div class="d01" id="s02" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 02</p>
+            </div>
+            <div class="d02" id="s03" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 03</p>
+
+            </div>
+            <div class="d02" id="s04" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 04</p>
+            </div>
+            <div class="d03" id="s05" onclick="abrir(this.id)">    
+                        <img src="img/Document-icon.png" alt="">
+                        <p>Legenda 05</p>
+            </div>
+            <div class="d03" id="s06" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 06</p>
+            </div>
+            <div class="d04" id="s07" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 07</p>
+            </div>
+            <div class="d04" id="s08" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 08</p>
+            </div>
+            <div class="d04" id="s09" onclick="abrir(this.id)">
+
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 09</p>
+            </div>
+            <div class="d05" id="s10" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 10</p>
+            </div>
+            <div class="d05" id="s11" onclick="abrir(this.id)">
+
+                    <img src="img/Document-icon.png" alt="">
+                    <p>Legenda 11</p>
+            </div>
+            <div class="d06" id="s12" onclick="abrir(this.id)">
+                    <img src="img/Document-icon.png" alt="">
+                    <p>"7? $9# #353 _838#</p>
+            </div>
+            <div class="d06" id="s13" onclick="abrir(this.id)">
+                    <img src="img/Locked-Document-icon.png" alt="">
+                    <p>Legenda 13</p>
+            </div>
+            <div class="d07" id="s14" onclick="abrir(this.id)">
+                <img src="img/Document-icon.png" alt="">
+                <p>Legenda 14</p>
+        </div>
+        <div class="d07" id="s15" onclick="abrir(this.id)">
+                <img src="img/Document-icon.png" alt="">
+                <p>Legenda 15</p>
+        </div>
+        </section>
+
+        <footer></footer>
+</main>
+<script>
+    const user = window.document.getElementById('myuser');
+    const level = window.document.getElementById('level');
+    const maintag = document.querySelector('main');  
+    var aba = window.document.getElementById('content');
+    var info = document.querySelector('.info');
+    var decider = document.getElementById('info');
+   
+    function change() {
+    
+    
+    if(decider.checked){
+        info.style.width = '0%';
+        info.querySelector('p').style.display = 'none';
+        aba.querySelector('img').style.maxwidth = '80%';
+        aba.querySelector('img').style.left = '50%';
+        
+    } else {
+       
+        info.style.width = '20%';
+        info.querySelector('p').style.display = 'block';
+        aba.querySelector('img').style.maxWidth = '60%';
+        aba.querySelector('img').style.left = '60%';
+    }
+    
+}
+
+    function fechar(){
+        aba.style.display = 'none';
+        maintag.style.opacity = '1'
+        aba.querySelector('img').remove();
+        decider.checked = false;
+        info.style.width = '0%';
+        info.querySelector('p').style.display = 'none';
+        aba.querySelector('img').style.maxwidth = '80%';
+        aba.querySelector('img').style.left = '50%';
+        
+    }
+
+    function abrir(clicked_id){
+    const myImage = document.createElement("img");
+    aba.querySelector('h1').innerText = document.getElementById(clicked_id).querySelector('p').innerText;
+        switch (clicked_id) {
+    case 's01':
+    myImage.src ="img/content/cadeirante.jpg";
+    info.querySelector('p').innerHTML = '' 
+        break;
+    case 's02':
+    myImage.src ="img/content/Chupataro.png";
+    info.querySelector('p').innerHTML = ''  
+        break;
+    case 's03':
+    myImage.src ="img/content/guindaste.jpg";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's04':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''        
+        break;
+    case 's05':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's06':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's07':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's08':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's09':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's10':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's11':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's12':
+    myImage.src ="img/content/12.png";
+    info.querySelector('p').innerHTML = '&#34;Julgueis os pecados dos inocentes, a troco das chamas do Cplqfcoqtvg. Por pura satisfação. Ó paradoxo.&#34; <br><br>&#8211;Cesar'
+        break;
+    case 's13':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's14':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;
+    case 's15':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break;  
+    }
+        aba.querySelector('article').appendChild(myImage);
+        aba.style.display = 'block';
+        maintag.style.opacity = '0.5'
+    }
+    
+    function list(){
+        var name = document.getElementById("name").value.toLowerCase();
+        var id = document.getElementById("id").value.toLowerCase();
+        const formtag = document.getElementById('login-screen');
+        
+        function entrar(){
+            formtag.style.display = 'none';
+            maintag.style.display = 'block';
+            for (var i = 0; i < docs.length; i++) {
+                docs[i].style.display = "block";
+            }
+        }
+        
+        switch (name + " " + id) {
+    case "bob 0":
+        var docs = document.querySelectorAll(`.docs > div`);
+        entrar();
+        break;
+    case "chiara d'angelo 66020140000":
+        document.getElementById("myuser").innerHTML = "Chiara D'Angelo";
+        var docs = document.getElementsByClassName('d01');
+        entrar();
+        break;
+    case "klaus saphira 31102150000":
+        document.getElementById("myuser").innerHTML = "Klaus Saphira";
+        var docs = document.getElementsByClassName('d02');
+        entrar();
+        break;
+    case "nimeria tallon 19170490000":
+        document.getElementById("myuser").innerHTML = "Nimeria Tallon";
+        var docs = document.getElementsByClassName('d03');
+        entrar();
+        break;
+    case "mirai misuzune 00339850000":
+        document.getElementById("myuser").innerHTML = "Mirai Misuzune";
+        var docs = document.getElementsByClassName('d05');
+        entrar();
+        break;
+    case "isaac kollins 70120220000":
+        document.getElementById("myuser").innerHTML = "Isaac Kollins";
+        var docs = document.getElementsByClassName('d06');
+        entrar();
+        break;
+    default:
+        window.alert('acess denied');
+    }
+}
+</script>
+</body>
+</html>

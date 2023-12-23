@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+
+:root{
+    --cor0: #121F67;
+    --cor1: #152BA0;
+    --cor2: #17277F;
+    --cor3: #091348;
+    --cor4: #050B2B;
+}
+
+body{
+    
+    background-color: #000311;
+   
+}
+
+            /*Login*/
+#login-screen img{
+    height: 275px;
+    width: 300px ;
+    
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width:500px;
+
+    background-color: #091348;
+    border: #050B2B outset 5px;
+    transform: translate(-50%,-50%)
+}
+#login > h1{
+    text-align: center;
+    font-size: 2em;
+    margin: 10px, 10px;
+}
+.campo{
+    background-color: #121F67;
+    display: block;
+    width: 80%;
+    height:40px;
+    margin: 10px  auto;
+    
+}
+
+div.campo .material-icons{
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    transform: translate(6px,4px);
+}
+
+div.campo input{
+    font-size: 1em;
+    background-color: #121F67;
+    color: white;
+    height: calc(100% - 1px);
+    width: calc(100% - 45px);
+    border: none;
+    transform: translateY(-6px);
+}
+#form button{
+    display: block;
+    font-size: 1em;
+    width: 50%;
+    height: 30px;
+    background-color: #17277F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+}
+#form button:hover{
+background-color: #152BA0;
+cursor: pointer;
+transition: background-color .3s;
+}
+            /*Content*/
+
+#content{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;    
+}
+#content h1{
+    position:absolute;
+    top: 3%;
+    left: 50%;
+    font-size: 2.1em;
+    padding: 0 auto;
+    transform: translateX(-50%);
+}
+#content article{
+    background: #121f6780 url(../img/logo-background.png) no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: bottom;
+    border: #182fb080 outset 5px;
+    height: 80vh;
+    width: 80vw;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#content  img{
+    max-width: 80%;
+    margin: auto;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.info{
+    background-color: #091348;
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease ;
+    
+}
+.info p{
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 88%;
+    width: 99%;
+    padding-right: 5px;
+
+     position: relative;
+     top: 60px;
+     left: 5px;
+}
+            /*Button*/
+.btn{
+    
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    color: black;
+    font-weight: lighter;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    z-index: 1;
+
+    color: white;
+}
+#btn-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    line-height:25px;
+    font-size: 60px;
+}
+label{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    
+}
+#info{
+    display: none;
+}
+
+#info:checked+label{
+    background-color: #182fb0;
+}
+.btn:hover{
+    
+   background-color:#182fb0;
+}
+
+#btn-close:active{
+    background-color: #17277F;
+}
+
+
+            /*header*/
+
+header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    column-gap: 64px;
+    margin-bottom: 50px;
+}
+
+header .material-icons{
+    display: inline-block;
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    transform: translate(6px,4px);
+}
+
+header h2{
+    display: inline-block;
+}
+
+
+
+            /*Main*/
+
+main{
+    background: url(../img/logo-background.png) no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center center;
+    display: none;
+    
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+            /*Docs*/
+.docs{
+    background-color: #17277F30;
+    border-bottom: #17277F groove  5px;
+    border-top: #17277F groove  5px;
+    min-height: 70vh;
+    max-width: 70vw;
+
+    justify-content: left space-between ;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.docs > div{
+    display: none;
+    flex: 1 1 200px 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.docs div:hover{
+    transform: translate(3px, -3px);;
+    transition: transform .3s;
+    font-weight: bolder;
+}
+
+.docs div a{
+    text-decoration: none;
+}
+
+footer{ 
+    width: 100vw;
+    height: 10vh;
+}
+
+
+

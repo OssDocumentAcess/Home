@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    body{
+        background-color: black;
+        color: white;
+    }
+    img{
+        width: 250px;
+    }
+    div#hint{
+      background: gold;
+      color: orangered;
+      padding: .5em;
+      font-weight: bold;
+    }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='hint'>
+      
+        <p>This is some hint on how to be safe in this community </p>
+         <p>This is another hint on how to be safe in this community </p>
+        </div>
+  
+      <button> show hint </button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+$(document).ready(function(){
+
+$('button').click(function(){
+$('#hint').toggle('slow');
+
+});
+
+});
+</script>
+</body>
+</html>
