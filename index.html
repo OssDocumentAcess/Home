@@ -32,9 +32,10 @@
         <article>
             <button class="btn" id="btn-close" onclick="fechar()">&times;</button>
             <div class="info">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem veniam minus, tempora ipsa voluptates aperiam dignissimos corrupti molestiae, fugit corporis ipsum totam consequuntur pariatur asperiores modi. Porro, qui quis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut obcaecati neque commodi enim aliquam, minus accusamus excepturi animi sed. Aperiam animi ex, culpa consequatur impedit alias temporibus exercitationem quibusdam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut perferendis illum voluptatum nobis eligendi rerum similique voluptatibus dolore earum itaque assumenda tempora, inventore dolorem exercitationem eos nam soluta iusto dicta?</p>
+                <p></p>
             </div>
-
+            <div class="backdrop"></div>
+            <div><img src="" alt=""></div>
             <input type="checkbox" name="info" id="info"  > 
             <label for="info" class="btn" onclick="change()" >
             <i class="material-icons" style="font-size: 40px;">
@@ -108,16 +109,20 @@
                     <p>"7? $9# #353 _838#</p>
             </div>
             <div class="d06" id="s13" onclick="abrir(this.id)">
-                    <img src="img/Locked-Document-icon.png" alt="">
-                    <p>Legenda 13</p>
+                    <img src="img/Document-icon.png" alt="">
+                    <p>#838_ 353# #9$ ?7"</p>
             </div>
-            <div class="d07" id="s14" onclick="abrir(this.id)">
+            <div class="d06" id="s14" onclick="abrir(this.id)">
                 <img src="img/Document-icon.png" alt="">
                 <p>Legenda 14</p>
         </div>
         <div class="d07" id="s15" onclick="abrir(this.id)">
                 <img src="img/Document-icon.png" alt="">
                 <p>Legenda 15</p>
+        </div>
+        <div class="d07" id="s16" onclick="abrir(this.id)">
+            <img src="img/Document-icon.png" alt="">
+            <p>Legenda 16</p>
         </div>
         </section>
 
@@ -137,7 +142,7 @@
     if(decider.checked){
         info.style.width = '0%';
         info.querySelector('p').style.display = 'none';
-        aba.querySelector('img').style.maxwidth = '80%';
+        aba.querySelector('img').style.maxWidth = '80%';
         aba.querySelector('img').style.left = '50%';
         
     } else {
@@ -153,17 +158,16 @@
     function fechar(){
         aba.style.display = 'none';
         maintag.style.opacity = '1'
-        aba.querySelector('img').remove();
         decider.checked = false;
         info.style.width = '0%';
         info.querySelector('p').style.display = 'none';
-        aba.querySelector('img').style.maxwidth = '80%';
+        aba.querySelector('img').style.maxWidth = '80%';
         aba.querySelector('img').style.left = '50%';
         
     }
 
     function abrir(clicked_id){
-    const myImage = document.createElement("img");
+    const myImage = aba.querySelector('img');
     aba.querySelector('h1').innerText = document.getElementById(clicked_id).querySelector('p').innerText;
         switch (clicked_id) {
     case 's01':
@@ -211,12 +215,12 @@
     info.querySelector('p').innerHTML = ''          
         break;
     case 's12':
-    myImage.src ="img/content/12.png";
-    info.querySelector('p').innerHTML = '&#34;Julgueis os pecados dos inocentes, a troco das chamas do Cplqfcoqtvg. Por pura satisfação. Ó paradoxo.&#34; <br><br>&#8211;Cesar'
+    myImage.src ="img/content/12-1.png";
+    info.querySelector('p').innerHTML = '&#34;<i>Julgueis os pecados dos inocentes, a troco das chamas do Cplqfcoqtvg. Por pura satisfação. Ó paradoxo.</i>&#34; <br><br>&#8211;Cesar '
         break;
     case 's13':
-    myImage.src ="img/content/";
-    info.querySelector('p').innerHTML = ''          
+    myImage.src ="img/content/12-2.png";
+    info.querySelector('p').innerHTML = ' Il secondo figlio porta lo stemma Buonarroti. Posso persino sentire i suoi <a href="https://ossdocumentacess.github.io/X/" target="_blank">"<i>bussare</i>"</a> nella culla: '          
         break;
     case 's14':
     myImage.src ="img/content/";
@@ -226,8 +230,12 @@
     myImage.src ="img/content/";
     info.querySelector('p').innerHTML = ''          
         break;  
+    case 's16':
+    myImage.src ="img/content/";
+    info.querySelector('p').innerHTML = ''          
+        break; 
     }
-        aba.querySelector('article').appendChild(myImage);
+        
         aba.style.display = 'block';
         maintag.style.opacity = '0.5'
     }
