@@ -123,7 +123,7 @@ info.querySelector('p').innerHTML = ' Il secondo figlio porta lo stemma Buonarro
  chave =  ''          
     break;
 case 's14':
-myImage.src ="img/content/chupataro.png";
+myImage.src ="img/content/cadeirante.png";
 info.querySelector('p').innerHTML = '' 
  chave =  '123'         
     break;
