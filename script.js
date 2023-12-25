@@ -115,12 +115,12 @@ info.querySelector('p').innerHTML = ''
 case 's12':
 myImage.src ="img/content/12-1.png";
 info.querySelector('p').innerHTML = '&#34;<i>Julgueis os pecados dos inocentes, a troco das chamas do Cplqfcoqtvg. Por pura satisfação. Ó paradoxo.</i>&#34; <br><br>&#8211;Cesar '
- chave =  ''
+ chave =  '0'
     break;
 case 's13':
 myImage.src ="img/content/12-2.png";
 info.querySelector('p').innerHTML = ' Il secondo figlio porta lo stemma Buonarroti. Posso persino sentire i suoi <a href="https://ossdocumentacess.github.io/X/" target="_blank">"<i>bussare</i>"</a> nella culla:'
- chave =  ''          
+ chave =  '0'          
     break;
 case 's14':
 myImage.src ="img/content/cadeirante.png";
