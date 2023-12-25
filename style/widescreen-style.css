@@ -126,6 +126,7 @@ transition: background-color .3s;
     border: #182fb080 outset 5px;
     height: 80vh;
     width: 80vw;
+    transition: background-color .4s, border .4s;
     
     position: relative;
     top: 50%;
