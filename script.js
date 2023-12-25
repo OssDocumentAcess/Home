@@ -166,6 +166,7 @@ info.querySelector('p').innerHTML = ''
                 aba.querySelector('article').style.backgroundColor = '#121f6780';
                 aba.querySelector('article').style.border = '#182fb080 outset 5px';
                 docs.classList.remove('xxx');
+                abrir()
         } else {window.alert('Acess Denied');}
     }
 }   
