@@ -2,6 +2,7 @@ const maintag = document.querySelector('main');// A divisão entre login e conte
 var aba = window.document.getElementById('content');// O container do arquivo
 var info = document.querySelector('.info');//O container da descrição
 var decider = document.getElementById('info');//Check box da descrição
+var loadScreen = document.querySelector('.load-screen');
 var chave 
 var docs
 
@@ -115,15 +116,15 @@ info.querySelector('p').innerHTML = ''
 case 's12':
 myImage.src ="img/content/12-1.png";
 info.querySelector('p').innerHTML = '&#34;<i>Julgueis os pecados dos inocentes, a troco das chamas do Cplqfcoqtvg. Por pura satisfação. Ó paradoxo.</i>&#34; <br><br>&#8211;Cesar '
- chave =  '0'
+ chave =  ''
     break;
 case 's13':
 myImage.src ="img/content/12-2.png";
 info.querySelector('p').innerHTML = ' Il secondo figlio porta lo stemma Buonarroti. Posso persino sentire i suoi <a href="https://ossdocumentacess.github.io/X/" target="_blank">"<i>bussare</i>"</a> nella culla:'
- chave =  '0'          
+ chave =  ''          
     break;
 case 's14':
-myImage.src ="img/content/cadeirante.png";
+myImage.src ="img/content/cadeirante.jpg";
 info.querySelector('p').innerHTML = '' 
  chave =  '123'         
     break;
@@ -182,8 +183,13 @@ function list(){
     //depois de que o login foi escolhido escode o Login e mostra o Main
     function entrar(){
         formtag.style.display = 'none';
-        maintag.style.display = 'block';
-        progress();
+        setTimeout(() => {
+            loadScreen.style.display='block'
+          }, 100); 
+            setTimeout(() => {
+              loadScreen.style.opacity='1'
+          }, 200); 
+          progress();
         for (var i = 0; i < docs.length; i++) {
             docs[i].style.display = "block";
         }
@@ -223,3 +229,46 @@ default:
     window.alert('Acess Denied');
 }
 }
+
+function progress(){
+    
+    var percent = document.querySelector('.percent');
+    var text = document.querySelector(".text");
+    var progress = document.querySelector('.progress');
+    var count = 1;
+    var per = 1;
+    var loading = setInterval(animate, 50);
+    var textArray = [
+      "Rastreando seu IPv4...",
+      "Analizando seu Historico...",
+      "Fazendo um Sandwish...",
+      "Nenhum lugar para esconder.",
+    ];
+    var randomNumber = Math.floor(Math.random() * textArray.length);
+    document.querySelector(".text").innerHTML = textArray[randomNumber];
+    
+    function animate(){
+      if(count >= 100 && per >= 100){
+        text.innerHTML = "Completed!";
+        clearInterval(loading);
+      ativar()
+      }else{
+        per = per + 1;
+        count = count + 1;
+        progress.style.width = per + '%';
+        percent.textContent = count + '%';
+      }
+    function ativar() {
+      setTimeout(() => {
+        loadScreen.style.opacity='0'
+      }, 500); 
+        setTimeout(() => {
+        loadScreen.style.display='none'
+        maintag.style.display = 'block';
+      }, 1000); 
+    }
+    setTimeout(() => {document.querySelector('.imgPixel').style.opacity='0'}, 300)
+  }
+  }
+  
+  
