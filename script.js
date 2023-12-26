@@ -183,6 +183,7 @@ function list(){
     function entrar(){
         formtag.style.display = 'none';
         maintag.style.display = 'block';
+        progress();
         for (var i = 0; i < docs.length; i++) {
             docs[i].style.display = "block";
         }

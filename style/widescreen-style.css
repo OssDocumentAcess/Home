@@ -101,7 +101,9 @@ background-color: #152BA0;
 cursor: pointer;
 transition: background-color .3s;
 }
-            /*Content*/
+
+  
+        /*Content*/
 
 #content{
     display: none;
@@ -301,6 +303,7 @@ main{
 img{
     max-width: 100%;
     display: block;
+    
 }
 
             /*Docs*/
